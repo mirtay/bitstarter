@@ -17,6 +17,25 @@
       body {
         padding-top: 60px;
       }
+      .linediv-l {
+        border-right: 1px white solid;
+      }
+      .linediv-r {
+        border-left: 1px white solid;
+      }
+    }
+
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+      .copy {
+        padding: 2.5% 10%;
+      }
+      .linediv-l {
+        border-bottom: 1px white solid;
+      }
+      .linediv-r {
+        border-top: 1px white solid;
+      }
     }
     
     /* All form factors */
@@ -63,6 +82,7 @@
   </style>
 </head>
 <body>
+  <!-- Mobile-friendly navbar -->
   <div class="navbar navbar-inverse havbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -86,6 +106,7 @@
     </div>
   </div>
 
+  <!-- Resizable layout -->
   <div class="container">
     <div class="row-fluid heading">
       <div class="span12">
@@ -101,21 +122,42 @@
       <div class="span5 offset1 video">
 	<img class="img-polaroid" src="http://placehold.it/480x300">
       </div>
-
-      <div class="span6">
-        <div class="thermometer">
-  	<div class="span6">
-            Thermometer
-  	</div>
+      <div class="span5 actions">
+        <div class="span8 offsets2">
+  	  <div class="statistics">
+            <div class="span4">
+	      <div class="linedive-l">
+ 	        <h3>1000</h3> <p>backers</p>
+	      </div>
+  	    </div>
+            <div class="span4">
+              <div class="linedive-c">
+ 	        <h3>$6000</h3> <p>of $10,000</p>
+	      </div>
+            </div>
+            <div class="span4">
+              <div class="linedive-r">
+ 	        <h3>10</h3> <p>days left</p>
+	      </div>
+            </div>
+          </div>
         </div>
-        <div class="order">
-  	Order
-        </div>
-        <div class="social">
-  	Social
-        </div>
+	<div class="span10 offset1">
+	  <div class="thermometer progress active">
+	    <div class="bar bar-success" style="width: 60%;"></div>
+	    <div class="bar bar-warning" style="width: 40%;"></div>
+	  </div>
+	</div>
+	<div class="span6 offset3 order">
+	  <button class="btn btn-success btn-large">Preorder</button>
+	</div>
+	<div class="span8 offset2 social">
+	  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+	  <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebooke</button>
+	</div>
       </div>
     </div>
+
     <div class="row section1">
       <div class="span12">
         Marketing Section 1
